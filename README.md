@@ -40,3 +40,4 @@ yarn redwood db up
 This will read the schema definition in `api/prisma/schema.prisma` and generate a sqlite database in `api/prisma/dev.db`
 
 If you've made changes to the schema run `yarn redwood db save` to generate a migration, and `yarn redwood db up` to apply the migration/ generate a new ORM client.
+"# redwood-blog-tutorial" 
