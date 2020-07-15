@@ -11,16 +11,12 @@ import './index.css'
 
 netlifyIdentity.init()
 
-netlifyIdentity.init()
-
 ReactDOM.render(
   <FatalErrorBoundary page={FatalErrorPage}>
     <AuthProvider client={netlifyIdentity} type="netlify">
-      <AuthProvider client={netlifyIdentity} type="netlify">
-        <RedwoodProvider>
-          <Routes />
-        </RedwoodProvider>
-      </AuthProvider>
+      <RedwoodProvider>
+        <Routes />
+      </RedwoodProvider>
     </AuthProvider>
   </FatalErrorBoundary>,
   document.getElementById('redwood-app')
