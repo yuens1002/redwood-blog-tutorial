@@ -3,6 +3,7 @@ import { useAuth } from '@redwoodjs/auth'
 
 const BlogLayout = ({ children }) => {
   const { logIn, logOut, isAuthenticated, currentUser } = useAuth()
+
   return (
     <>
       <header>
@@ -22,7 +23,7 @@ const BlogLayout = ({ children }) => {
                 {isAuthenticated ? 'Log Out' : 'Log In'}
               </a>
             </li>
-            {isAuthenticated && <li>{currentUser.email}</li>}
+            {isAuthenticated && <li>Logged in as {currentUser[0].email}</li>}
           </ul>
         </nav>
       </header>
